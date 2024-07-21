@@ -1,0 +1,3 @@
+D:/Trabajos/Semestre 2/Programacion 2/SFML/cmake-build-debug/CMakeFiles/SFML.dir
+D:/Trabajos/Semestre 2/Programacion 2/SFML/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Trabajos/Semestre 2/Programacion 2/SFML/cmake-build-debug/CMakeFiles/rebuild_cache.dir
