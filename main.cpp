@@ -31,21 +31,14 @@ int main() {
     player2.setFillColor(sf::Color::White);
     player2.setPosition(1250,150);
 
-    sf::RectangleShape midLine(sf::Vector2f(6,150));
-    midLine.setFillColor(sf::Color::White);
-    midLine.setPosition(637,10);
 
-    sf::RectangleShape midLine1(sf::Vector2f(6,150));
-    midLine1.setFillColor(sf::Color::White);
-    midLine1.setPosition(637,190);
-
-    sf::RectangleShape midLine2(sf::Vector2f(6,150));
-    midLine2.setFillColor(sf::Color::White);
-    midLine2.setPosition(637,370);
-
-    sf::RectangleShape midLine3(sf::Vector2f(6,150));
-    midLine3.setFillColor(sf::Color::White);
-    midLine3.setPosition(637,550);
+    sf::RectangleShape arreglodelineas[40];
+    for(int a=0;a<40;a++){
+        sf::RectangleShape line(sf::Vector2f(6,10));
+        line.setFillColor(sf::Color::White);
+        line.setPosition(637,20*a);
+        arreglodelineas[a]=line;
+    }
 
     sf::CircleShape pelota(15);
     pelota.setFillColor(sf::Color::White);
@@ -124,10 +117,10 @@ int main() {
         window.draw(pelota);
         window.draw(rightScoreText);
         window.draw(leftScoreText);
-        window.draw(midLine);
-        window.draw(midLine1);
-        window.draw(midLine2);
-        window.draw(midLine3);
+        for(int i=0;i<40;i++)
+        {
+            window.draw(arreglodelineas[i]);
+        }
         window.display();
     }
     return 0;
